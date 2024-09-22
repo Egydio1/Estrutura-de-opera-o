@@ -1,0 +1,35 @@
+while True:
+  print("Digite a operação:")
+  print("1 - Adição")
+  print("2 - Subtração")
+  print("3 - Multiplicação")
+  print("4 - Divisão")
+
+  opcao = input("Digite a opção desejada: ")
+
+  if opcao in ["1", "2", "3", "4"]:
+    break
+  else:
+    print("Opção inválida. Tente novamente.")
+
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+if opcao == "1":
+  resultado = num1 + num2
+  print("Adição")
+elif opcao == "2":
+  resultado = num1 - num2
+  print("Subtração")
+elif opcao == "3":
+  resultado = num1 * num2
+  print("Multiplicação")
+elif opcao == "4":
+  if num2 == 0:
+    print("Erro: Divisão por zero")
+  else:
+    resultado = num1 / num2
+    print("Divisão")
+
+if opcao in ["1", "2", "3", "4"]:
+  print("Resultado:", resultado)
